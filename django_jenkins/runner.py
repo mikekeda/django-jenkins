@@ -99,7 +99,7 @@ class EXMLTestResult(TextTestResult):
         self.buffer = False
 
     def _add_tb_to_test(self, test, test_result, err):
-        """Add a traceback to the test result element"""
+        """Add a traceback to the test result element."""
         exc_class, exc_value, _ = err
         tb_str = self._exc_info_to_string(err, test)
         test_result.set('type', '%s.%s' % (exc_class.__module__, exc_class.__name__))
@@ -107,7 +107,7 @@ class EXMLTestResult(TextTestResult):
         test_result.text = smart_text(tb_str)
 
     def dump_xml(self, output_dir):
-        """Dumps test result to xml"""
+        """Dumps test result to xml."""
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
