@@ -27,7 +27,7 @@ class Reporter(object):
         try:
             for location in apps_locations:
                 if os.path.isdir(location):
-                    for dirpath, dirnames, filenames in os.walk(os.path.relpath(location)):
+                    for dirpath, _, filenames in os.walk(os.path.relpath(location)):
                         if dirpath.endswith(tuple(
                                 ''.join([os.sep, exclude_dir]) for exclude_dir in options['pyflakes_exclude_dirs'])):
                             continue

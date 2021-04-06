@@ -15,9 +15,7 @@ from . import set_option
 
 
 class Reporter(object):
-    """
-    Runs flake8 on python files.
-    """
+    """Runs flake8 on python files."""
     def add_arguments(self, parser):
         parser.add_argument('--max-complexity',
                             dest='flake8-max-complexity',

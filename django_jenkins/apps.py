@@ -4,9 +4,7 @@ from django_jenkins.tasks.with_coverage import CoverageReporter
 
 
 class JenkinsConfig(AppConfig):
-    """
-    Enable coverage measurement as soon as possible
-    """
+    """Enable coverage measurement as soon as possible"""
     name = 'django_jenkins'
 
     def __init__(self, app_name, app_module):
@@ -15,7 +13,5 @@ class JenkinsConfig(AppConfig):
         self.coverage = None
 
         if 'jenkins' in sys.argv and '--enable-coverage' in sys.argv:
-            """
-            Starting coverage as soon as possible
-            """
+            """Starting coverage as soon as possible"""
             self.coverage = CoverageReporter()

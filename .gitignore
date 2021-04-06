@@ -11,3 +11,4 @@ reports
 django_jenkins.egg-info/
 MANIFEST
 geckodriver.log
+.DS_Store
